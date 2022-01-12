@@ -1,21 +1,16 @@
-# [NodeSource](https://nodesource.com) Node.js Binary Distributions
+# [NodeSource](https://nodesource.com) Node.js Linux Kolay Kurulum
 
 [![NodeSource](images/ns-linux-distributions.svg)](https://nodesource.com)
 
 [![CircleCI](https://circleci.com/gh/nodesource/distributions/tree/master.svg?style=svg)](https://circleci.com/gh/nodesource/distributions/tree/master)
 
-This repository contains documentation for using the **[NodeSource](https://nodesource.com)** **[Node.js](http://nodejs.org)** Binary Distributions via .rpm and .deb as well as their setup and support scripts.
-
-If you are looking for NodeSource's low-impact Node.js performance monitoring platform, please **[get started here](https://accounts.nodesource.com/sign-up-linuxdistro).**
-
-Please file an issue if you are experiencing a problem or would like to discuss something related to the distributions.
-
-Pull requests are encouraged if you have changes you believe would improve the setup process or increase compatibility across Linux distributions.
+Bu repository, NodeSource Node.js İkili Dağıtımlarını .rpm ve .deb aracılığıyla kullanmanın yanı sıra kurulum ve destek komut dosyalarını içerir.
 
 ## Table of Contents
-* **[Debian and Ubuntu based distributions](#deb)** (deb)
-  - [Installation instructions](#debinstall)
-  - [Manual installation](#debmanual)
+
+* **[Debian ve Ubuntu tabanlı dağıtımlar](#deb)** (deb)
+  - [Kurulum Talimatları](#debinstall)
+  - [Manual Kurulum](#debmanual)
 * **[Enterprise Linux based distributions](#rpm)** (rpm)
   - [Installation instructions](#rpminstall)
 * **[Tests](#tests)**
@@ -24,6 +19,7 @@ Pull requests are encouraged if you have changes you believe would improve the s
 * **[License](#project-license)**
 
 <a name="deb"></a>
+
 ## Debian and Ubuntu based distributions
 
 **Available architectures:**
@@ -133,6 +129,7 @@ NodeSource will maintain support for stable, testing and unstable releases of De
 * **Ubilinux 4.0 "Dolcetto"** (via Debian 9)
 
 <a name="debinstall"></a>
+
 ### Installation instructions
 
 **Node.js v17.x**:
@@ -217,6 +214,7 @@ apt-get install -y build-essential
 ```
 
 <a name="debmanual"></a>
+
 ### Manual installation
 
 If you're not a fan of `curl <url> | bash -`, or are using an unsupported distribution, you can try a manual installation.
@@ -244,6 +242,7 @@ curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor 
 # wget --quiet -O - https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | sudo tee "$KEYRING" >/dev/null
 gpg --no-default-keyring --keyring "$KEYRING" --list-keys
 ```
+
 The key ID is `9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280`.
 
 **3. Add the desired NodeSource repository**
@@ -271,6 +270,7 @@ sudo apt-get install nodejs
 ```
 
 <a name="rpm"></a>
+
 ## Enterprise Linux based distributions
 
 **Available architectures:**
@@ -305,6 +305,7 @@ NodeSource will continue to maintain the following architectures and may add add
 * **Rocky 8** (64-bit)
 
 **Supported CloudLinux versions:**
+
 * **CloudLinux 6** (32-bit for Node <= 10.x and 64-bit)
 
 **Supported Fedora versions:**
@@ -319,6 +320,7 @@ NodeSource will continue to maintain the following architectures and may add add
 * **Amazon Linux 2** (64-bit)
 
 <a name="rpminstall"></a>
+
 ### Installation instructions
 
 _NOTE: If you are using RHEL 6 or CentOS 6, you might want to read about [running Node.js on older distros](https://github.com/nodesource/distributions/blob/master/OLDER_DISTROS.md)._
@@ -397,6 +399,7 @@ yum install gcc-c++ make
 ```
 
 <a name="tests"></a>
+
 ## Tests
 
 To test an installation is working (and that the setup scripts are working!) use:
@@ -404,7 +407,9 @@ To test an installation is working (and that the setup scripts are working!) use
 ```sh
 curl -fsSL https://deb.nodesource.com/test | bash -
 ```
+
 <a name="questions"></a>
+
 # FAQ
 
 Q: How do I use this repo when behind a proxy?
@@ -460,6 +465,7 @@ Q: I cannot install Node.js on Debian Jessie or Ubuntu Trusty Tahr: GPG error, w
 A: See [issue #1181](https://github.com/nodesource/distributions/issues/1181)
 
 <a name="requests"></a>
+
 # Requested Distributions
 
 We, unfortunately, do not have the resources necessary to support and test the plethora of Linux releases in the wild, so we rely on community members such as yourself to get support on your favorite distributions! This is a list of releases that have been requested by the community. If you are interested in contributing to this project, this would be a great place to start!
@@ -479,6 +485,7 @@ We, unfortunately, do not have the resources necessary to support and test the p
 * VzLinux - [Issue #1060](https://github.com/nodesource/distributions/issues/1060)
 
 <a name="authors-contributors"></a>
+
 ## Authors and Contributors
 
 <table><tbody>
@@ -510,11 +517,12 @@ We, unfortunately, do not have the resources necessary to support and test the p
 Contributions are welcomed from anyone wanting to improve this project!
 
 <a name="project-license"></a>
+
 ## License
 
 This material is Copyright (c) NodeSource and licensed under the MIT license. All rights not explicitly granted in the MIT license are reserved. See the included [LICENSE.md](./LICENSE.md) file for more details.
 
-------------------------------------------------------------------
+---
 
 *Supported with love by the [NodeSource](https://nodesource.com) team*
 
